@@ -25,5 +25,14 @@ class LexerSuite(unittest.TestCase):
     def test_number_identifier(self):
         """test identifiers"""
         self.assertTrue(TestLexer.test("69", "Error Token 6", 107))
+   def test_number_identifier(self):
+        """test identifiers"""
+        self.assertTrue(TestLexer.test("1_234_567", "1234567,<EOF>", 108))
+    def test_number2_identifier(self):
+        """test identifiers"""
+        self.assertTrue(TestLexer.test("1_72", "172,<EOF>", 109))
+    def test_number3_identifier(self):
+        """test identifiers"""
+        self.assertTrue(TestLexer.test("172", "172,<EOF>", 110))
     
 
